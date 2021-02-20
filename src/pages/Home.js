@@ -1,4 +1,5 @@
 import { React, useEffect } from "react";
+import GameDetail from "../components/GameDetail";
 //Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/gamesAction";
@@ -8,7 +9,6 @@ import Game from "../components/Game";
 import Styled from "styled-components";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { getAllByAltText } from "@testing-library/react";
 
 const Home = () => {
   //Fetch Games
@@ -22,6 +22,7 @@ const Home = () => {
 
   return (
     <GameList>
+      <GameDetail />
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
